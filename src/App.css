@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+/* Css Variables */
+:root {
+  --first-color-light: #0099ff;
+  --white-color: #F7F6FB;
+  --body-font: 'Nunito', sans-serif;
+}
+/* App Styling */
+.App {
+  text-align: center;
+}
+/* Body Styling */
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    transition: 0.5s;
+}
+/* NavBar Styling */
+.l-navbar, .u-navbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: .5rem 0 2rem;
+    background-color: var(--first-color-light);
+    transition: .5s;
+}
+
+.nav, .u-nav  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.nav_list, .u-nav_list  {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_link, .u-nav_link {
+    position: relative;
+    padding: 0.2rem 1rem;
+    height: 2rem;
+    width: 17rem;
+    color: #F7F6FB;
+    font-size: 0.97rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: left;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.nav_link:hover {
+    opacity: 1;
+    color: var(--white-color);
+}
+
+.nav_name, .u-nav_name {
+    padding-left: 0.5rem;
+    overflow: hidden;
+    color: var(--white-color)
+}
+
+.nav_logo, .u-nav_logo {
+    padding: 0.1rem 1rem;
+    height: 1.5rem;
+    width: 17rem;
+    font-size: 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: #F7F6FB;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_logo-icon {
+    transform: translateY(0%);
+}
+
+.nav_logo-name, .u-nav_logo-name {
+    margin: auto;
+    width: 16.5rem;
+    padding-left: 0.5rem;
+    color: #F7F6FB;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: left;
+}
+
+.u-navbar {
+    top: -100%;
+    width: 100%;
+    height: auto;
+    padding: 0.1rem 0.2rem;
+    transition-duration: 0.5s;
+}
+
+.u-nav_list {
+    padding: 0.3rem 0;
+    transition-duration: 0.5s;
+}
+
+.u-nav_link {
+    padding: 0.5rem 0.4rem;
+    height: auto;
+    width: 100%;
+    font-size: 0.95rem;
+    opacity: 1;
+    animation: none;
+}
+
+.u-nav_logo {
+    height: 2.2rem;
+    width: 100%;
+}
+
+.u-nav_logo-icon {
+    transition-duration: 0.5s;
+    transform: translateX(-30%) translateY(15%) scale(120%, 120%);
+    text-align: left;
+}
+
+.u-nav_logo-name {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.active {
+    padding-left: 0.75rem;
+    border-left: 3px solid #F7F6FB;
+    transition-duration: 0.2s;
+    opacity: 1;
+}
+/* Renders Page Container */
+.main-container, .main-container-2  {
+    position: relative;
+    padding: 0;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    transition-duration: 0.5s;
+}
+
+.main-container-2 {
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+.container {
+    width: 100%;
+}
+/* Personal Information Page */
+#main-banner-h1 {
+    position: relative;
+    top: 0;
+    padding: 3rem 0 2rem 0 ;
+}
+
+.profile-logo {
+    left: 0;
+    height: 200px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#profile-photo {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px
+}
+
+#profile-name {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.profile-info {
+    text-align: left;
+}
+
+#profile-info-text {
+    margin: 1rem 0;
+    text-indent: 40px;
+}
+
+.info {
+    margin: 2rem 0;
+    width: 100%;
+    text-align: left;
+}
+
+p, th, td, a, h5, li {
+    font-size: 1.2rem;
+}
+
+p {
+    text-indent: 4rem;
+}
+/* Mobile View */
+@media (max-width: 900px) {
+    .l-navbar {
+        left: -17rem; 
+    }
+    .u-navbar {
+        position: fixed;
+        top: 0;
+    }
+    .main-container {
+        top: 2rem;
+        left: 0rem;
+        width: 100%;
+    }
+    .profile-logo {
+        margin: 0 auto;
+        height: 200px;
+        width: 160px;
+        display: flex;
+    }
+    .container-foot {
+        margin-top: 5rem;
+    }
+}
